@@ -45,18 +45,29 @@ pip install praw
 6. Your app details will appear on the "Developed Applications" page. Note the following:
    - **client_id**: This is your app's unique identifier.
    - **client_secret**: This is your app's secret.
+<img width="859" alt="Screenshot 2023-12-18 at 8 49 01 AM" src="https://github.com/NEjim2001/Reddit_Multi_Subreddit_Poster/assets/144557253/eaf31ba7-1e73-4604-ae98-b98869feab5b">
 
 ### Finish Authentication with PRAW
 
 ```bash
 python refreshtoken.py
 ```
+**Terminal**
+
+<img width="703" alt="Screenshot 2023-12-18 at 9 54 42 AM" src="https://github.com/NEjim2001/Reddit_Multi_Subreddit_Poster/assets/144557253/52a650c3-5aa1-442d-8723-70c1db7ac02c">
 
 ## Set Up Subreddit CSV File
 
-1. **Go to Google Sheets, make a copy, rename "subreddits", and Fill out Information**
+1. **Go to Google Sheets, make a copy, rename copy "subreddits", and fill out the information (Keep Orange Header Row)**
 
 https://docs.google.com/spreadsheets/d/1Odn01NUtt-9CFxqdaXuben-nz8RQdGxieiDF87s6aYs/edit?usp=sharing
+   - Rules:
+      - Do not touch the Orange Header Row.
+      - Ensure Every Post has a Title.
+      - Include a Link or Body Text in Every Post (Choose one or the other).
+
+
+<img width="1185" alt="Screenshot 2023-12-18 at 8 57 14 AM" src="https://github.com/NEjim2001/Reddit_Multi_Subreddit_Poster/assets/144557253/977cbc77-c503-41a9-94cc-4d0a3fcf7e3a">
 
 
 2. **Download the CSV file from Google Drive:**
@@ -64,6 +75,9 @@ https://docs.google.com/spreadsheets/d/1Odn01NUtt-9CFxqdaXuben-nz8RQdGxieiDF87s6
    - Navigate to the top left corner and click on "File."
    - From the dropdown menu, select "Download."
    - Choose the option "Comma Separated Values (.csv)."
+<img width="587" alt="Screenshot 2023-12-18 at 8 57 47 AM" src="https://github.com/NEjim2001/Reddit_Multi_Subreddit_Poster/assets/144557253/751e06dc-4010-48aa-99ff-34cb6cfc7471">
+
+
 
 
 3. **Add CSV File to user_data folder (Replace previous document)**
@@ -78,10 +92,6 @@ python main.py
 # Contributing
 
 Feel free to contribute to this guide by opening issues or pull requests.
-
-# License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
