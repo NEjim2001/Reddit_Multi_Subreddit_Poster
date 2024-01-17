@@ -3,6 +3,9 @@ import json
 import praw
 import time
 import pandas as pd
+import glob
+import sys
+
 
 TIME_DELAY_SECONDS = 5
 
@@ -16,10 +19,17 @@ reddit = praw.Reddit(client_id=creds['client_id'],
                      redirect_uri=creds['redirect_uri'],
                      refresh_token=creds['refresh_token'])
 
-file_path = "user_data/subreddits - Sheet1.csv"
-data = pd.read_csv(file_path, header=0)
-failed_post = []
+file_paths = glob.glob("user_data/*.csv")
 
+if not file_paths:
+    print("No CSV files found in the 'user_data' directory. Exiting script.")
+    sys.exit()
+
+
+file_path = file_paths[0]
+data = pd.read_csv(file_path, header=0)
+
+failed_post = []
 for row, subreddit_data in data.iterrows():
     subreddit_name = subreddit_data.Subreddit  # Access column by name
     flair = subreddit_data.Flair
